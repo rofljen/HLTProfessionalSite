@@ -82,13 +82,13 @@ analytics:
 author:
   name             : "Jennifer Haliewicz"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "Masters Student in Human Language Technology at the University of Arizona. Bachelors of Arts in Applied Linguistics and French Language and Literature. Data analyst, cyclist, bike polo player, animal lover."
   location         : "Portland, OR"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
+  pubmed           :
+  googlescholar    : 
   email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     :  "https://www.researchgate.net/profile/Jennifer-Haliewicz"
   uri              :
   bitbucket        :
   codepen          :
@@ -102,11 +102,11 @@ author:
   instagram        : "rofljen"
   impactstory      :
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/jhaliewicz"
+  linkedin         : "jhaliewicz"
   orcid            : 
   pinterest        :
   soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    :
   steam            :
   tumblr           :
   twitter          : 
