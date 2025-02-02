@@ -11,21 +11,20 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.A. in French Language and Literature, Portland State University, 2012
+* B.A. in Applied Linguistics, Portland State University, 2021
+* M.S. in Human Language Technology, University of Arizona, 2025 (expected)
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Nov 2024 - Present: Language Technology Intern
+  * XRI Global
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Oct 2024 - Present: Customer Service Technician
+  * NAVEX Global
+ 
+* Nov 2022 - Feb 2024: Data Analyst
+  * Verint
   
 Skills
 ======
