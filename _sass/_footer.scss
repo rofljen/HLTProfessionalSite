@@ -1,5 +1,5 @@
 /* ========================================================================== 
-   MINIMAL FOOTER WITH SMALLER GREY CONTAINER
+   MINIMAL FOOTER WITH FIXED HEIGHT
    ========================================================================== */
 
 .page__footer {
@@ -10,32 +10,37 @@
   color: mix(#fff, $gray, 25%);
   background-color: $lighter-gray;
   border-top: 1px solid $light-gray;
+  max-height: 200px;  /* Limit the footer's max height */
+  overflow: hidden;  /* Hide overflow content */
+}
 
-  footer {
-    @include clearfix;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 200px;
-    max-width: 800px;  /* Set a max-width to make the grey container smaller */
-    padding: 0.5em 1em;  /* Reduced padding for a tighter look */
-    font-size: 0.9em;  /* Reduced font size for a cleaner look */
+footer {
+  @include clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;  /* Set a max-width to make the grey container smaller */
+  height: 100%;  /* Fill the available space within the footer */
+  padding: 0.5em 1em;  /* Reduced padding for a tighter look */
+  font-size: 0.9em;  /* Reduced font size for a cleaner look */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Center content vertically */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
+}
 
-  a {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .fas,
-  .fab,
-  .far,
-  .fal {
-    color: mix(#fff, $gray, 25%);
-  }
+.fas,
+.fab,
+.far,
+.fal {
+  color: mix(#fff, $gray, 25%);
 }
 
 .page__footer-copyright {
