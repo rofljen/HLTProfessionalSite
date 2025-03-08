@@ -10,7 +10,7 @@
   color: mix(#fff, $gray, 25%);
   background-color: $lighter-gray;
   border-top: 1px solid $light-gray;
-  max-height: 200px;  /* Limit the footer's max height */
+  max-height: 50px;  /* Limit the footer's max height */
   overflow: hidden;  /* Hide overflow content */
 }
 
