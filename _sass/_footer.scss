@@ -1,25 +1,13 @@
-/* ==========================================================================
-   FOOTER
+/* ========================================================================== 
+   MINIMAL FOOTER
    ========================================================================== */
 
 .page__footer {
   @include clearfix;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
   width: 100%;
-  clear: both;
-  /* sticky footer fix start */
-  position: absolute;
-  bottom: 0em;
-  height: auto;
-  /* sticky footer fix end */
-  margin-top: 3em;
+  position: relative;  /* Changed to relative to prevent sticky positioning */
+  margin-top: 1em;  /* Reduced margin to make footer closer to content */
   color: mix(#fff, $gray, 25%);
-  -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
-  -webkit-animation-delay: 0.45s;
-          animation-delay: 0.45s;
   background-color: $lighter-gray;
   border-top: 1px solid $light-gray;
 
@@ -27,13 +15,9 @@
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
     max-width: 100%;
-    padding: 0 1em 2em;
-
-    @include breakpoint($x-large) {
-      max-width: $x-large;
-    }
+    padding: 0;  /* Removed padding to make it minimal */
+    font-size: 0.9em;  /* Reduced font size for a cleaner look */
   }
 
   a {
@@ -55,7 +39,8 @@
 
 .page__footer-copyright {
   font-family: $global-font-family;
-  font-size: $type-size-7;
+  font-size: 0.8em;  /* Reduced font size for copyright text */
+  text-align: center;  /* Centered text for a minimal feel */
 }
 
 .page__footer-follow {
@@ -63,14 +48,14 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    text-align: center;  /* Centered social icons */
   }
 
   li {
     display: inline-block;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 0 5px;  /* Reduced padding for a tighter look */
     font-family: $sans-serif-narrow;
-    font-size: $type-size-6;
+    font-size: 0.8em;  /* Reduced font size */
     text-transform: uppercase;
   }
 
@@ -81,7 +66,7 @@
 
   a {
     padding-right: 10px;
-    font-weight: bold;
+    font-weight: normal;  /* Removed bold text for a cleaner look */
   }
 
   .social-icons {
