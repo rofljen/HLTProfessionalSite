@@ -1,20 +1,22 @@
 /* ========================================================================== 
-   MINIMAL FOOTER WITH FIXED HEIGHT AND NO OVERFLOW
+   MINIMAL FOOTER WITH FIXED 25px HEIGHT
    ========================================================================== */
 
 .page__footer {
   @include clearfix;
   width: 100%;
-  position: relative;  /* Changed to relative to prevent sticky positioning */
+  position: relative;  /* Prevent sticky positioning */
   margin-top: 1em;  /* Reduced margin to make footer closer to content */
   color: mix(#fff, $gray, 25%);
   background-color: $lighter-gray;
   border-top: 1px solid $light-gray;
-  padding: 0.5em 1em;  /* Adjust padding for minimal look */
-  font-size: 0.9em;  /* Reduced font size for a cleaner look */
+  height: 25px;  /* Set fixed height for the footer */
+  padding: 0;  /* Remove any additional padding */
+  font-size: 0.8em;  /* Reduce font size for a compact look */
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
+  overflow: hidden;  /* Ensure no overflow */
 }
 
 footer {
@@ -23,8 +25,10 @@ footer {
   margin-right: auto;
   max-width: 800px;  /* Set a max-width to make the grey container smaller */
   width: 100%;  /* Ensure the footer takes full available width */
-  padding: 0;  /* Reduced padding for minimal look */
-  display: block;  /* Make sure it's a block-level element */
+  height: 100%;  /* Fill the available height in the .page__footer */
+  display: flex;  /* Flexbox to center content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
 a {
@@ -54,30 +58,4 @@ a {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    text-align: center;  /* Centered social icons */
-  }
-
-  li {
-    display: inline-block;
-    padding: 0 5px;  /* Reduced padding for a tighter look */
-    font-family: $sans-serif-narrow;
-    font-size: 0.8em;  /* Reduced font size */
-    text-transform: uppercase;
-  }
-
-  li + li:before {
-    content: "";
-    padding-right: 5px;
-  }
-
-  a {
-    padding-right: 10px;
-    font-weight: normal;  /* Removed bold text for a cleaner look */
-  }
-
-  .social-icons {
-    a {
-      white-space: nowrap;
-    }
-  }
-}
+    text-ali
