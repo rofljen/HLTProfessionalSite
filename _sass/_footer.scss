@@ -1,5 +1,5 @@
 /* ========================================================================== 
-   MINIMAL FOOTER WITH FIXED HEIGHT
+   MINIMAL FOOTER WITH FIXED HEIGHT AND NO OVERFLOW
    ========================================================================== */
 
 .page__footer {
@@ -10,8 +10,11 @@
   color: mix(#fff, $gray, 25%);
   background-color: $lighter-gray;
   border-top: 1px solid $light-gray;
-  max-height: 50px;  /* Limit the footer's max height */
-  overflow: hidden;  /* Hide overflow content */
+  padding: 0.5em 1em;  /* Adjust padding for minimal look */
+  font-size: 0.9em;  /* Reduced font size for a cleaner look */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
 
 footer {
@@ -19,12 +22,9 @@ footer {
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;  /* Set a max-width to make the grey container smaller */
-  height: 100%;  /* Fill the available space within the footer */
-  padding: 0.5em 1em;  /* Reduced padding for a tighter look */
-  font-size: 0.9em;  /* Reduced font size for a cleaner look */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  /* Center content vertically */
+  width: 100%;  /* Ensure the footer takes full available width */
+  padding: 0;  /* Reduced padding for minimal look */
+  display: block;  /* Make sure it's a block-level element */
 }
 
 a {
