@@ -1,9 +1,9 @@
 {% include base_path %}
 
-<div class="page__footer-follow">
-  <ul class="social-icons">
+<div class="page__footer-follow" style="font-size: 12px; padding: 5px;">
+  <ul class="social-icons" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 5px; padding: 0; margin: 0; list-style: none;">
     {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+      <li style="font-weight: bold;">{{ site.data.ui-text[site.locale].follow_label }}</li>
     {% endif %}
     {% if site.twitter.username %}
       <li><a href="https://twitter.com/{{ site.twitter.username }}"><i class="fab fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
@@ -21,4 +21,10 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright" style="font-size: 10px; text-align: center; padding: 3px;">
+  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. 
+  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} 
+  <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; 
+  <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, 
+  a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+</div>
