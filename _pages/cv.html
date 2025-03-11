@@ -57,7 +57,7 @@ author_profile: true
             margin-bottom: 1rem;
         }
 
-        .experience-item, .education-item {
+        .experience-item, .education-item, {
             margin-bottom: 1rem;
         }
 
@@ -74,23 +74,47 @@ author_profile: true
         ul {
             list-style: disc;
             margin-left: 1rem;
+            
         }
+        .tech-skills {
+            padding-left: 0;
+        
+        }
+            
+        .tech b {
+            font-weight: bold;
+            font-style: italic;
+            color: var(--text-light); /* Ensures the correct green color */
+            
+        }
+        .tech-skills b {
+            font-weight: bold;
+            color: var(--dark-green); /* Ensures headings in the skills list are green */
+            margin-bottom: 0.2rem;
+            
+        }
+
+
+
     </style>
 </head>
 <body>
     <header>
         <h1>Jennifer Haliewicz</h1>
         <div class="contact-info">
-            Portland, Oregon<br>
-            jennifer.haliewicz@gmail.com | 971-269-6006
+            Portland, Oregon | jennifer.haliewicz@gmail.com | 971-269-6006
         </div>
+        <div class="prof-summary"><h2>PROFESSIONAL SUMMARY</h2>
+            Data Scientist with 3+ years of experience in machine learning, NLP, and AI-driven solutions.<br>Expertise in optimizing conversational AI systems and improving model performance, with a focus<br> on enhancing accuracy and streamlining data workflows.<br><br> Pursuing an M.S. in Human Language Technology, combining technical skills with practical applications for scalable impact.</div>
+            
     </header>
 
     <section>
-        <h2>Education</h2>
+        <h2>EDUCATION</h2>
         <div class="education-item">
-            <div class="degree">M.S. in Human Language Technology</div>
-            <div class="date">University of Arizona, Expected 2025</div>
+            <div class="degree"><b>M.S. in Human Language Technology</b></div>
+            <div class="date"><i>University of Arizona | Expected 2025</i></div>
+            <div class="relevant-courses">Relevant Coursework: Machine Learning, Advanced Statistical NLP, Data Mining, Deep Learning, Speech Processing, Information Retreival</div>
         </div>
         <div class="education-item">
             <div class="degree">B.A. in Applied Linguistics</div>
@@ -101,12 +125,40 @@ author_profile: true
             <div class="date">Portland State University, 2012</div>
         </div>
     </section>
+    <section>
+        <h2>TECHNICAL SKILLS</h2>
+<div class="tech-skills">
+    <div>
+        <b>Programming & Data Science</b><br>
+        <span>Python (pandas, NumPy, scikit-learn, TensorFlow, PyTorch), SQL, R, Azure Machine Learning</span>
+    </div>
+    <div>
+        <b>Machine Learning & NLP</b><br>
+        <span>Supervised/Unsupervised Learning, Deep Learning, Speech Processing, NLP, Model Deployment & Optimization</span>
+    </div>
+    <div>
+        <b>Big Data & Databases</b><br>
+        <span>PostgreSQL, BigQuery, NoSQL, Data Warehousing</span>
+    </div>
+    <div>
+        <b>Cloud & Platforms</b><br>
+        <span>AWS, Azure (Azure ML, Azure Databricks), Git, Jupyter, Power BI</span>
+    </div>
+    <div>
+        <b>Tools</b><br>
+        <span>Tableau, Looker, Sigma Computing, Data Pipelines, MLFlow, Visual Studio Code, PyCharm</span>
+    </div>
+</div>
+
+</div>
+    </section>
 
     <section>
         <h2>Work Experience</h2>
         <div class="experience-item">
-            <div class="company-name">XRI Global | Language Technology Intern</div>
+            <div class="company-name">XRI Global | Human Language Technology Intern</div>
             <div class="date">Oct 2024 - Present</div>
+            <div class="tech"><b>Technologies: PostgreSQL, Tableau, Replit, Python, GitHub</div></b>
             <ul>
                 <li>Contributed to the <em>Bridging the Digital Divide</em> project, expanding language technology for low-resource languages.</li>
                 <li>Designed and implemented PostgreSQL database schemas to support NLP research and dataset management.</li>
@@ -116,29 +168,38 @@ author_profile: true
         </div>
         <div class="experience-item">
             <div class="company-name">NAVEX Global | Customer Service Technician</div>
-            <div class="date">Nov 2024 - Present</div>
+            <div class="date">Nov 2024 - Present</div><br>
         </div>
         <div class="experience-item">
             <div class="company-name">Verint | Data Analyst</div>
             <div class="date">Nov 2022 - Feb 2024</div>
+            <div class="tech"><b>Technologies: PowerBI, SQL, JavaScript, Jira, Asana, Confluence, Excel</div></b>
             <ul>
-                <li>Analyzed IVA interactions to improve natural language understanding and user experience.</li>
-                <li>Applied LLMs and pattern recognition to enhance conversational AI performance.</li>
-                <li>Led analytics for a major client, driving KPI improvements and refining chatbot interactions.</li>
-                <li>Conducted data governance audits to ensure accuracy and compliance.</li>
+                <li>Enhanced chatbot performance through NLP techniques, reducing customer escalations and improving resolution times by over 25%.</li>
+                <li>Led analytics for major clients, improving key performance metrics like interaction time, resolution speed, and customer satisfaction.</li>
+                <li>Developed and implemented data governance strategies, improving data accuracy and streamlining information retrieval.</li>
             </ul>
         </div>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Computational Linguistics & NLP</strong>: Language modeling, text analysis, phonetics, morphology, syntactic parsing</li>
-            <li><strong>Data Visualization & Dashboard Development</strong>: Tableau, Looker, Power BI, Sigma Computing</li>
-            <li><strong>SQL & Data Management</strong>: Advanced SQL, database design, optimization</li>
-            <li><strong>Linguistic Data Analysis</strong>: Conversational AI, text classification, transcription analysis</li>
-            <li><strong>Cross-Functional Collaboration</strong>: Effective communication across engineering, design, and business teams</li>
-        </ul>
+        <div class="experience-item">
+            <div class="company-name">Grin, Inc | Associate Data Analyst</div>
+            <div class="date">Jun 2022 - Oct 2022</div>
+            <div class="tech"><b>Technologies: SQL, BigQuery, Sigma Computing, Salesforce, Google Analytics</div></b>
+            <ul>
+                <li>Analyzed customer, communication and marketing data to optimize ad spend, improve engagement and drive retention.</li>
+                <li>Designed and implemented SQL-based reporting dashboards, reducing manual reporting time by 10+ hours per week.</li>
+                <li>Supported the creating of scalable data pipelines to improve process efficiency and optimize decision-making.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="company-name">Mountain Measurement, Inc | Data Analyst & Program Manager</div>
+            <div class="date">Jun 2022 - Oct 2022</div>
+            <div class="tech"><b>Technologies: SQL, Tableau, MariaDB, HTML, CSS, Ruby on Rails</div></b>
+            <ul>
+                <li>Developed SQL-driven Tableau dashboards to monitor nursing education program performance across 300+ institutions.</li>
+                <li>Automated reporting workflows, reducing manual data processing time by over 30%.</li>
+                <li>Managed the transition to digital platforms, increasing engagement and offerings in continuing education programs.</li>
+            </ul>
+        </div>
     </section>
 
     <section>
