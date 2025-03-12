@@ -39,6 +39,7 @@
     font-weight: bold;
   }
 }
+
 /* Post pagination navigation links */
 .pagination {
   @include full();
@@ -82,11 +83,21 @@
     }
   }
 }
-/* Standard Navigation (Removed Hamburger) */
+
+/* Standard Navigation (Complete Remake - No Hamburger) */
 .greedy-nav {
   position: relative;
   min-width: 250px;
   background: $background-color;
+  
+  /* Remove any leftover hamburger-related styles */
+  .nav-button,
+  .nav-toggle,
+  button,
+  input[type="checkbox"] {
+    display: none;
+  }
+  
   a {
     display: block;
     margin: 0 1rem;
@@ -97,19 +108,23 @@
       color: $masthead-link-color-hover;
     }
   }
+  
   .visible-links {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between; /* Changed from space-around to space-between */
+    justify-content: center; /* Center everything */
     list-style: none;
     padding: 0;
-    margin: 0 2em; /* Added horizontal margin for better spacing */
+    margin: 0;
+    width: 100%;
   }
+  
   .visible-links li {
     display: inline-block;
-    padding: 0 1rem;
+    padding: 0 1.5rem; /* Slightly more padding between items */
   }
+  
   .visible-links a {
     position: relative;
     &:before {
@@ -128,6 +143,7 @@
     }
   }
 }
+
 /* Navigation list */
 .nav__list {
   font-size: 1.25rem;
