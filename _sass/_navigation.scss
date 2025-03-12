@@ -176,6 +176,8 @@
   position: relative;
   min-width: 250px;
   background: $background-color;
+   display: none !important;
+
 
   a {
     display: block;
