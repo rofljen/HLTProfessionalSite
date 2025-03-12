@@ -11,14 +11,6 @@
           animation-delay: 0.15s;
   z-index: 30;
 }
-
-.greedy-nav button {
-  position: absolute;
-  right: 0; /* Aligns to the right */
-  top: 50%;
-  transform: translateY(-50%); /* Centers it vertically */
-}
-
 .masthead__inner-wrap {
   @include container;
   @include clearfix;
