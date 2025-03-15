@@ -112,8 +112,6 @@
   .visible-links {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center; /* Center everything */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -122,7 +120,7 @@
   
   .visible-links li {
     display: inline-block;
-    padding: 0 1rem; /* Slightly more padding between items */
+    padding: 0 0.5rem; /* Reduce spacing between items */
   }
   
   .visible-links a {
