@@ -111,7 +111,7 @@
   
   .visible-links {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center; /* Center everything */
     list-style: none;
