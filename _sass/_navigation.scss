@@ -86,6 +86,8 @@
 
 /* Standard Navigation (Complete Remake - No Hamburger) */
 .greedy-nav {
+   width: 100%; /* Makes sure it takes up full width */
+   overflow: hidden; /* Prevents accidental wrapping */
   position: relative;
   min-width: 250px;
   background: $background-color;
