@@ -86,11 +86,13 @@
 
 /* Standard Navigation (Complete Remake - No Hamburger) */
 .greedy-nav {
-   width: 100%; /* Makes sure it takes up full width */
-   overflow: hidden; /* Prevents accidental wrapping */
-  position: relative;
-  min-width: 250px;
-  background: $background-color;
+   display: flex;
+   justify-content: center; /* Center content */
+   align-items: center;
+   width: 100%;
+   max-width: 100%;
+   white-space: nowrap; /* Prevents line breaks */
+}
   
   /* Remove any leftover hamburger-related styles */
   .nav-button,
@@ -113,19 +115,21 @@
   
   .visible-links {
     display: flex;
-    flex-wrap: nowrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    flex-wrap: nowrap; /* Ensure no wrapping */
+    justify-content: center; /* Aligns items properly */
+    align-items: center;
     width: 100%;
-  }
+}
+
   
   .visible-links li {
-    display: inline-block;
-    padding: 0 0.5rem; /* Reduce spacing between items */
-  }
+    padding: 0 0.5rem; /* Less spacing between items */
+    margin: 0;
+}
   
   .visible-links a {
+     display: inline-block;
+    padding: 0.5rem;
     position: relative;
     &:before {
       content: "";
