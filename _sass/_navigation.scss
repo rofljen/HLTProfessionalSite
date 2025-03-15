@@ -84,68 +84,84 @@
   }
 }
 
-/* Standard Navigation (Complete Remake - No Hamburger) */
+/* Standard Navigation (Fixed - No Wrapping Issue) */
 .greedy-nav {
-   display: flex;
-   justify-content: center; /* Center content */
-   align-items: center;
-   width: 100%;
-   max-width: 100%;
-   white-space: nowrap; /* Prevents line breaks */
-}
-  
-  /* Remove any leftover hamburger-related styles */
-  .nav-button,
-  .nav-toggle,
-  button,
-  input[type="checkbox"] {
-    display: none;
-  }
-  
-  a {
-    display: block;
-    margin: 0 1rem;
-    padding: 0rem 0;
-    color: $masthead-link-color;
-    text-decoration: none;
-    &:hover {
-      color: $masthead-link-color-hover;
-    }
-  }
-  
-  .visible-links {
-    display: flex;
-    flex-wrap: nowrap; /* Ensure no wrapping */
-    justify-content: center; /* Aligns items properly */
-    align-items: center;
-    width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap; /* Prevents line breaks */
+  background: $background-color;
+  padding: 0.5rem 0;
 }
 
-  
-  .visible-links li {
-    padding: 0 0.5rem; /* Less spacing between items */
-    margin: 0;
+/* Remove any leftover hamburger-related styles */
+.nav-button,
+.nav-toggle,
+button,
+input[type="checkbox"] {
+  display: none;
 }
-  
-  .visible-links a {
-     display: inline-block;
-    padding: 0.5rem;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 4px;
-      background: mix(#fff, $primary-color, 50%);
-      width: 100%;
-      transform: scaleX(0);
-      transition: $global-transition;
-    }
-    &:hover:before {
-      transform: scaleX(1);
-    }
+
+a {
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0rem 0;
+  color: $masthead-link-color;
+  text-decoration: none;
+  font-size: 1rem; /* Ensure consistent font size */
+  &:hover {
+    color: $masthead-link-color-hover;
   }
+}
+
+.visible-links {
+  display: flex !important;
+  flex-wrap: nowrap !important; /* Prevents items from breaking onto a new line */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Space between items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.visible-links li {
+  display: inline-block !important;
+  padding: 0 0.5rem;
+  margin: 0;
+  white-space: nowrap; /* Ensures text doesn't wrap */
+}
+
+.visible-links a {
+  display: inline-block;
+  padding: 0.5rem;
+  position: relative;
+  font-weight: bold;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    background: mix(#fff, $primary-color, 50%);
+    width: 100%;
+    transform: scaleX(0);
+    transition: $global-transition;
+  }
+  &:hover:before {
+    transform: scaleX(1);
+  }
+}
+
+/* Ensure navigation container has enough width */
+.nav-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* Navigation list */
