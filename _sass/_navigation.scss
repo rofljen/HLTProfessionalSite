@@ -93,11 +93,12 @@
   max-width: 100%;
   background: $background-color;
   padding: 0.75rem 0;
-  gap: 1rem; /* Adds spacing between elements */
-  flex-wrap: wrap; /* Allow elements to wrap when needed */
+  flex-wrap: nowrap; /* Ensures items stay in a straight line */
+  gap: 1rem; /* Adds spacing between items */
   @include breakpoint($medium) {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
     flex-direction: column;
-    padding: 1.5rem; /* More padding for better spacing */
+    padding: 1.5rem;
   }
 }
 
@@ -137,6 +138,24 @@ a {
   }
 }
 
+.visible-links {
+  display: flex !important;
+  flex-wrap: nowrap; /* Prevents items from breaking onto a new line */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem; /* Space between items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  @include breakpoint($medium) {
+    flex-wrap: wrap; /* Allow wrapping only on smaller screens */
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* Ensure individual links do not break awkwardly */
 .visible-links li {
   display: inline-block !important;
   padding: 0 0.5rem;
@@ -144,6 +163,7 @@ a {
   white-space: nowrap; /* Prevents breaking words */
 }
 
+/* Navigation Links */
 .visible-links a {
   display: inline-block;
   padding: 0.5rem;
@@ -154,22 +174,7 @@ a {
   &:hover {
     color: $masthead-link-color-hover;
   }
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Slightly lower for better visibility */
-    height: 2px;
-    background: mix(#fff, $primary-color, 50%);
-    width: 100%;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-  }
-  &:hover:before {
-    transform: scaleX(1);
-  }
 }
-
 /* Ensure navigation container has enough width */
 .nav-container {
   width: 100%;
@@ -203,13 +208,13 @@ a {
   }
 }
 
-@include breakpoint($small) {
+@media screen and (min-width: 1024px) {
   .greedy-nav {
-    flex-direction: column;
-    padding: 1rem;
+    flex-wrap: nowrap; /* Forces all links into one row */
   }
   .visible-links {
-    flex-direction: column; /* Stack vertically */
-    gap: 0.5rem;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
+}
 }
