@@ -85,19 +85,19 @@
   }
 }
 
-/* Standard Navigation (Responsive) */
 .greedy-nav {
   display: flex !important;
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 100%;
-  white-space: nowrap; /* Prevents line breaks */
   background: $background-color;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
+  gap: 1rem; /* Adds spacing between elements */
+  flex-wrap: wrap; /* Allow elements to wrap when needed */
   @include breakpoint($medium) {
-    flex-direction: column; /* Stack items vertically on medium screens */
-    padding: 1rem; /* Increase padding on smaller screens */
+    flex-direction: column;
+    padding: 1.5rem; /* More padding for better spacing */
   }
 }
 
@@ -120,10 +120,9 @@ a {
   }
 }
 
-/* Visible Links (Centered and Non-Wrapping) */
 .visible-links {
   display: flex !important;
-  flex-wrap: nowrap !important; /* Prevents items from breaking onto a new line */
+  flex-wrap: wrap; /* Allows items to wrap when needed */
   justify-content: center;
   align-items: center;
   gap: 1rem; /* Space between items */
@@ -131,9 +130,10 @@ a {
   padding: 0;
   margin: 0;
   width: 100%;
+  text-align: center;
   @include breakpoint($medium) {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    gap: 0.5rem; /* Adjust gap for stacked links */
+    flex-direction: column;
+    gap: 0.75rem; /* Adjust spacing for stacked layout */
   }
 }
 
@@ -141,24 +141,29 @@ a {
   display: inline-block !important;
   padding: 0 0.5rem;
   margin: 0;
-  white-space: nowrap; /* Ensures text doesn't wrap */
+  white-space: nowrap; /* Prevents breaking words */
 }
 
 .visible-links a {
   display: inline-block;
   padding: 0.5rem;
-  position: relative;
   font-weight: bold;
+  text-decoration: none;
+  color: $masthead-link-color;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: $masthead-link-color-hover;
+  }
   &:before {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
-    height: 4px;
+    bottom: -2px; /* Slightly lower for better visibility */
+    height: 2px;
     background: mix(#fff, $primary-color, 50%);
     width: 100%;
     transform: scaleX(0);
-    transition: $global-transition;
+    transition: transform 0.3s ease-in-out;
   }
   &:hover:before {
     transform: scaleX(1);
@@ -204,6 +209,7 @@ a {
     padding: 1rem;
   }
   .visible-links {
-    flex-direction: column; /* Stack vertically on smaller screens */
+    flex-direction: column; /* Stack vertically */
+    gap: 0.5rem;
   }
 }
