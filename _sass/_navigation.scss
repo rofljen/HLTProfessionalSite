@@ -94,12 +94,7 @@
   background: $background-color;
   padding: 0.75rem 0;
   flex-wrap: nowrap; /* Ensures items stay in a straight line */
-  gap: 1rem; /* Adds spacing between items */
-  @include breakpoint($medium) {
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    flex-direction: column;
-    padding: 1.5rem;
-  }
+  gap: 1.5rem; /* Adds spacing between items */
 }
 
 .nav-button,
@@ -123,19 +118,14 @@ a {
 
 .visible-links {
   display: flex !important;
-  flex-wrap: wrap; /* Allows items to wrap when needed */
+  flex-wrap: nowrap; /* Prevents items from breaking onto a new line */
   justify-content: center;
   align-items: center;
-  gap: 1rem; /* Space between items */
+  gap: 1.5rem; /* Space between items */
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
-  text-align: center;
-  @include breakpoint($medium) {
-    flex-direction: column;
-    gap: 0.75rem; /* Adjust spacing for stacked layout */
-  }
 }
 
 .visible-links {
@@ -152,11 +142,7 @@ a {
     flex-wrap: wrap; /* Allow wrapping only on smaller screens */
     flex-direction: column;
     gap: 0.75rem;
-  }
-}
-
-/* Ensure individual links do not break awkwardly */
-.visible-links li {
+  }.visible-links li {
   display: inline-block !important;
   padding: 0 0.5rem;
   margin: 0;
@@ -208,12 +194,15 @@ a {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 768px) {
   .greedy-nav {
-    flex-wrap: nowrap; /* Forces all links into one row */
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    flex-wrap: wrap;
+    padding: 1.5rem;
   }
+
   .visible-links {
-    flex-wrap: nowrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem; /* Adjust gap for stacked links */
   }
 }
