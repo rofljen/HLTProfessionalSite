@@ -85,16 +85,20 @@
   }
 }
 
+/* Responsive Navigation */
 .greedy-nav {
-  display: flex !important;
+  display: flex;
+  flex-direction: row; /* Default: horizontal */
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 100%;
-  background: $background-color;
-  padding: 0.75rem 0;
-  flex-wrap: nowrap; /* Ensures items stay in a straight line */
-  gap: 1.5rem; /* Adds spacing between items */
+}
+
+/* Mobile: Stack navigation */
+@media screen and (max-width: 768px) {
+  .greedy-nav {
+    flex-direction: column; /* Stack items */
+  }
 }
 
 .nav-button,
@@ -104,64 +108,20 @@ input[type="checkbox"] {
   display: none;
 }
 
+/* Links Styling */
 a {
   display: inline-block;
   margin: 0 1rem;
   padding: 0rem 0;
   color: $masthead-link-color;
   text-decoration: none;
-  font-size: 1rem; /* Ensure consistent font size */
+  font-size: 1rem;
   &:hover {
     color: $masthead-link-color-hover;
   }
 }
 
-.visible-links {
-  display: flex !important;
-  flex-wrap: nowrap; /* Prevents items from breaking onto a new line */
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem; /* Space between items */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-
-.visible-links {
-  display: flex !important;
-  flex-wrap: nowrap; /* Prevents items from breaking onto a new line */
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem; /* Space between items */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  @include breakpoint($medium) {
-    flex-wrap: wrap; /* Allow wrapping only on smaller screens */
-    flex-direction: column;
-    gap: 0.75rem;
-  }.visible-links li {
-  display: inline-block !important;
-  padding: 0 0.5rem;
-  margin: 0;
-  white-space: nowrap; /* Prevents breaking words */
-}
-
-/* Navigation Links */
-.visible-links a {
-  display: inline-block;
-  padding: 0.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: $masthead-link-color;
-  transition: color 0.3s ease-in-out;
-  &:hover {
-    color: $masthead-link-color-hover;
-  }
-}
-/* Ensure navigation container has enough width */
+/* Navigation Container */
 .nav-container {
   width: 100%;
   max-width: 100%;
@@ -169,7 +129,7 @@ a {
   justify-content: center;
 }
 
-/* Navigation list */
+/* Navigation List */
 .nav__list {
   font-size: 1.25rem;
   ul {
@@ -194,14 +154,21 @@ a {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .greedy-nav {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    flex-wrap: wrap;
-    padding: 1.5rem;
-  }
+/* Visible Links: Responsive */
+.visible-links {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent line break */
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
 
+@media screen and (max-width: 768px) {
   .visible-links {
     flex-direction: column;
-    gap: 0.75rem; /* Adjust gap for stacked links */
-   }
+  }
+}
