@@ -1,20 +1,18 @@
+/* Breadcrumbs */
 .breadcrumbs {
     font-size: 14px;
     color: #666;
     margin: 10px 30px;
 }
-
 .breadcrumbs a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     transition: color 0.3s;
 }
-
 .breadcrumbs a:hover {
     color: #007bff;
 }
-
 .breadcrumbs span {
     margin: 0 5px;
     color: #999;
@@ -43,7 +41,6 @@
     display: flex;
     gap: 15px;
 }
-
 .nav-links a {
     text-decoration: none;
     color: black;
@@ -54,7 +51,6 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 }
-
 .nav-links a:hover {
     background-color: #e0e0e0;
     transform: scale(1.05);
@@ -70,14 +66,39 @@
     font-weight: bold;
     border: 1px solid #ddd;
     transition: 0.3s;
+    text-decoration: none;
+    color: black;
 }
-
 .nav-button:hover {
     background: #f0f0f0;
 }
 
+/* Menu Toggle for Mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+}
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+/* Container for padding below fixed navbar */
+.content-container {
+    padding-top: 80px; /* Adjust based on navbar height */
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+    }
     .nav-links {
         display: none;
         flex-direction: column;
@@ -86,17 +107,33 @@
         left: 50%;
         transform: translateX(-50%);
         background: white;
-        padding: 10px;
+        padding: 15px;
         border-radius: 10px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
     }
-
+    .nav-links a {
+        margin: 5px 0;
+        text-align: center;
+    }
     .nav-links.show {
         display: flex;
     }
-
     .menu-toggle {
-        display: block;
-        cursor: pointer;
+        display: flex;
     }
+}
+
+/* Additional styles to ensure proper masthead integration */
+.masthead {
+    position: relative;
+    height: 60px; /* Adjust as needed */
+}
+.masthead__inner-wrap {
+    width: 100%;
+}
+
+/* Clear existing greedy-nav styles if needed */
+.greedy-nav {
+    display: none;
 }
