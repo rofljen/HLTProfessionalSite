@@ -1,4 +1,3 @@
-// Greedy Navigation
 $(document).ready(function() {
   var $nav = $('#site-nav');
   var $btn = $('#site-nav button');
