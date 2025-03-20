@@ -1,8 +1,8 @@
 /* Breadcrumbs */
 .breadcrumbs {
-    font-size: 14px;
+    font-size: 12px;
     color: #666;
-    margin: 10px 30px;
+    margin: 8px 20px;
 }
 .breadcrumbs a {
     text-decoration: none;
@@ -23,31 +23,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 25px;
+    padding: 5px 20;
     background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 40px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
     position: fixed;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    max-width: 1000px;
+    max-width: 900px;
     z-index: 1000;
 }
 
 /* Navigation Buttons */
 .nav-links {
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 .nav-links a {
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: none;
     color: black;
     font-weight: bold;
-    padding: 7px 12px;
-    border-radius: 16px;
+    padding: 5px 8px;
+    border-radius: 12px;
     background: #f8f8f8;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
@@ -59,10 +59,10 @@
 
 /* Left & Right Buttons */
 .nav-button {
-    font-size: 14px;
+    font-size: 12px;
     background: white;
-    padding: 6px 12px;
-    border-radius: 16px;
+    padding: 4px 9px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -80,7 +80,7 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    height: 20px;
+    height: 15px;
     cursor: pointer;
 }
 .menu-toggle span {
@@ -99,7 +99,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .navbar {
-        padding: 12px 20px;
+        padding: 8px 18px;
     }
     .nav-links {
         display: none;
@@ -109,13 +109,13 @@
         left: 50%;
         transform: translateX(-50%);
         background: white;
-        padding: 15px;
+        padding: 12px;
         border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
         width: 80%;
     }
     .nav-links a {
-        margin: 5px 0;
+        margin: 3px 0;
         text-align: center;
     }
     .nav-links.show {
@@ -129,7 +129,7 @@
 /* Additional styles to ensure proper masthead integration */
 .masthead {
     position: relative;
-    height: 50px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
 }
 .masthead__inner-wrap {
     width: 100%;
