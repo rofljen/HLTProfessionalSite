@@ -13,53 +13,36 @@ var $hlinks = $('#site-nav .hidden-links');
 var breaks = [];
 
 function updateNav() {
-
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
   // The visible list is overflowing the nav
-  if($vlinks.width() > availableSpace) {
-
-    // Record the width of the list
+  if ($vlinks.width() > availableSpace) {
     breaks.push($vlinks.width());
-
-    // Move item to the hidden list
     $vlinks.children().last().prependTo($hlinks);
 
-    // Show the dropdown btn
-    if($btn.hasClass('hidden')) {
+    if ($btn.hasClass('hidden')) {
       $btn.removeClass('hidden');
     }
-
-  // The visible list is not overflowing
   } else {
-
-    // There is space for another item in the nav
-    if(availableSpace > breaks[breaks.length-1]) {
-
-      // Move the item to the visible list
+    if (availableSpace > breaks[breaks.length - 1]) {
       $hlinks.children().first().appendTo($vlinks);
       breaks.pop();
     }
 
-    // Hide the dropdown btn if hidden list is empty
-    if(breaks.length < 1) {
+    if (breaks.length < 1) {
       $btn.addClass('hidden');
       $hlinks.addClass('hidden');
     }
   }
 
-  // Keep counter updated
   $btn.attr("count", breaks.length);
 
-  // Recur if the visible list is still overflowing the nav
-  if($vlinks.width() > availableSpace) {
+  if ($vlinks.width() > availableSpace) {
     updateNav();
   }
-
 }
 
 // Window listeners
-
 $(window).resize(function() {
   updateNav();
 });
@@ -70,3 +53,31 @@ $btn.on('click', function() {
 });
 
 updateNav();
+
+/*
+* Mobile Menu Toggle
+*/
+
+$(document).ready(function() {
+  var $menuToggle = $('.menu-toggle');
+  var $navLinks = $('.nav-links');
+
+  if ($menuToggle.length && $navLinks.length) {
+    // Toggle menu on button click
+    $menuToggle.on('click', function() {
+      $navLinks.toggleClass('show');
+    });
+
+    // Close menu when clicking outside of it
+    $(document).on('click', function(event) {
+      if (!$navLinks.is(event.target) && !$menuToggle.is(event.target) && $navLinks.has(event.target).length === 0) {
+        $navLinks.removeClass('show');
+      }
+    });
+
+    // Close menu when a nav link is clicked
+    $navLinks.find('a').on('click', function() {
+      $navLinks.removeClass('show');
+    });
+  }
+});
