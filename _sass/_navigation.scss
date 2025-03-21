@@ -52,4 +52,98 @@
     transition: all 0.3s ease-in-out;
 }
 .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Navbar Button */
+.nav-button {
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 8px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    border: none;
+    color: #4A8D7C;
+    transition: 0.3s;
+}
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Menu Toggle for Mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15px;
+    cursor: pointer;
+}
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+    display: none;
+}
+.nav-links.mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.nav-links.mobile a {
+    margin: 3px 0;
+    text-align: center;
+}
+
+/* Mobile Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 8px 18px;
+    }
+    
+    /* Hide main links in mobile view */
+    .nav-links {
+        display: none;
+    }
+
+    /* Display mobile menu toggle */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Show mobile menu when toggle is clicked */
+    .nav-links.mobile.show {
+        display: flex;
+    }
+
+    /* Display mobile menu on click */
+    .mobile-menu {
+        display: block;
+    }
+}
+
+/* Ensuring content doesn't hide behind the fixed navbar */
+.content-container {
+    padding-top: 80px;
+}
+
+/* Clear greedy-nav styles */
+.greedy-nav {
+    display: none;
+}
