@@ -14,7 +14,6 @@
             {% assign domain = base_path %}
           {% endif %}
           <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
-          {% endif %}
         {% endfor %}
       </div>
 
@@ -24,7 +23,6 @@
           {% for link in site.data.navigation.main %}
             {% if link.title != "Main Link" %}
               <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
-            {% endif %}
           {% endfor %}
         </div>
       </div>
