@@ -14,19 +14,21 @@
             {% assign domain = base_path %}
           {% endif %}
           <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+          {% endif %}
         {% endfor %}
       </div>
 
       <!-- Mobile Menu (includes both visible and hidden links for mobile) -->
-      <div class="mobile-menu">
-        <!-- Hidden links for mobile menu (initially hidden) -->
-        <div class="nav-links hidden-links">
-          {% for link in site.data.navigation.hidden %}
-            <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
+      <div class="dropdown">
+        <div class="dropdown-menu">
+          {% for link in site.data.navigation.main %}
+            {% if link.title != "Main Link" %}
+              <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
+            {% endif %}
           {% endfor %}
         </div>
       </div>
-
+      
       <!-- Mobile menu toggle (hamburger icon) -->
       <div class="menu-toggle">
         <span></span>
@@ -42,6 +44,3 @@
 
 <!-- Your Custom Greedy Navigation JavaScript -->
 <script src="{{ base_path }}/assets/js/plugins/jquery.greedy-navigation.js"></script>
-
-<!-- Any additional JavaScript for mobile menu or other functionality -->
-<script src="{{ base_path }}/assets/js/your-other-scripts.js"></script>
