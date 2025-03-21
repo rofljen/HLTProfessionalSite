@@ -137,3 +137,24 @@
 .greedy-nav {
     display: none;
 }
+
+/* Hide mobile menu by default */
+.mobile-menu {
+    display: none;
+}
+
+/* Show mobile menu when toggle is clicked */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
