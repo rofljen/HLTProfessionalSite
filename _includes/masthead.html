@@ -6,7 +6,7 @@
       <a href="{{ base_path }}/" class="nav-button">{{ site.title }}</a>
 
       <!-- Middle navigation links -->
-      <div class="nav-links">
+      <div class="nav-links visible-links">
         {% for link in site.data.navigation.main %}
           {% if link.url contains 'http' %}
             {% assign domain = '' %}
@@ -17,20 +17,17 @@
         {% endfor %}
       </div>
 
-      <!-- Mobile Menu (now includes both visible and hidden links) -->
+      <!-- Mobile Menu (includes both visible and hidden links for mobile) -->
       <div class="mobile-menu">
-        <!-- Links (visible and more links) for mobile -->
-        <div class="nav-links">
-          {% for link in site.data.navigation.main %}
-            <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
-          {% endfor %}
+        <!-- Hidden links for mobile menu (initially hidden) -->
+        <div class="nav-links hidden-links">
           {% for link in site.data.navigation.hidden %}
             <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
           {% endfor %}
         </div>
       </div>
 
-      <!-- Mobile menu toggle -->
+      <!-- Mobile menu toggle (hamburger icon) -->
       <div class="menu-toggle">
         <span></span>
         <span></span>
@@ -39,3 +36,12 @@
     </nav>
   </div>
 </div>
+
+<!-- jQuery Library (ensure it's included first) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Your Custom Greedy Navigation JavaScript -->
+<script src="{{ base_path }}/assets/js/plugins/jquery.greedy-navigation.js"></script>
+
+<!-- Any additional JavaScript for mobile menu or other functionality -->
+<script src="{{ base_path }}/assets/js/your-other-scripts.js"></script>
