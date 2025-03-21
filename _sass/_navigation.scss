@@ -35,7 +35,7 @@
     z-index: 1000;
 }
 
-/* Navigation Buttons */
+/* Navigation Links */
 .nav-links {
     display: flex;
     gap: 8px;
@@ -47,114 +47,9 @@
     font-weight: bold;
     padding: 8px 12px;
     border-radius: 8px;
-    background:  rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     box-shadow: none;
     transition: all 0.3s ease-in-out;
 }
 .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.8);;
-    transform: none;
-}
-
-.nav-button {
-    font-size: 12px;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 8px 14px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    border: none; /* Remove border */
-    color: #4A8D7C; /* Match the green text color */
-    transition: 0.3s;
-}
-
-.nav-button:hover {
-    background: rgba(255, 255, 255, 0.8);
-}
-
-/* Menu Toggle for Mobile */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 15px;
-    cursor: pointer;
-}
-.menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    border-radius: 3px;
-}
-
-/* Container for padding below fixed navbar */
-.content-container {
-    padding-top: 80px; /* Adjust based on navbar height */
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 8px 18px;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: white;
-        padding: 12px;
-        border-radius: 10px;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-        width: 80%;
-    }
-    .nav-links a {
-        margin: 3px 0;
-        text-align: center;
-    }
-    .nav-links.show {
-        display: flex;
-    }
-    .menu-toggle {
-        display: flex;
-    }
-}
-
-/* Additional styles to ensure proper masthead integration */
-.masthead {
-    position: relative;
-    height: 40px; /* Adjust as needed */
-}
-.masthead__inner-wrap {
-    width: 100%;
-}
-
-/* Clear existing greedy-nav styles if needed */
-.greedy-nav {
-    display: none;
-}
-
-/* Hide mobile menu by default */
-.mobile-menu {
-    display: none;
-}
-
-/* Show mobile menu when toggle is clicked */
-@media (max-width: 768px) {
-    .mobile-menu {
-        display: block;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-}
-
+    background-color: rgba(255, 255, 255, 0.
