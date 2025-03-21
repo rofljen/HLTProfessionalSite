@@ -17,22 +17,12 @@
         {% endfor %}
       </div>
 
-      <!-- Mobile Dropdown (Hidden by default on desktop) -->
-      <div class="dropdown mobile-only">
-        <button class="nav-button" id="dropdown-btn">More ▼</button>
-        <ul id="dropdown-menu" class="hidden">
-          {% for link in site.data.navigation.hidden %}
-            <li><a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a></li>
+      <!-- Mobile Menu (now includes both visible and hidden links) -->
+      <div class="mobile-menu">
+        <!-- Links (visible and more links) for mobile -->
+        <div class="nav-links">
+          {% for link in site.data.navigation.main %}
+            <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
           {% endfor %}
-        </ul>
-      </div>
-
-      <!-- Mobile menu toggle -->
-      <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </div>
-</div>
+          {% for link in site.data.navigation.hidden %}
+            <a href="{{ base_path }}{{ link.url }}">{{ link.t
