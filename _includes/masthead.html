@@ -8,25 +8,22 @@
       <!-- Middle navigation links -->
       <div class="nav-links visible-links">
         {% for link in site.data.navigation.main %}
-          {% if link.url contains 'http' %}
-            {% assign domain = '' %}
-          {% else %}
-            {% assign domain = base_path %}
-          {% endif %}
+          {% assign domain = link.url contains 'http' | ternary: '', base_path %}
           <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
         {% endfor %}
       </div>
 
-      <!-- Mobile Menu (includes both visible and hidden links for mobile) -->
+      <!-- Mobile Menu -->
       <div class="dropdown">
         <div class="dropdown-menu">
           {% for link in site.data.navigation.main %}
             {% if link.title != "Main Link" %}
               <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
-          {% endif %}
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
-      
+
       <!-- Mobile menu toggle (hamburger icon) -->
       <div class="menu-toggle">
         <span></span>
@@ -37,8 +34,37 @@
   </div>
 </div>
 
-<!-- jQuery Library (ensure it's included first) -->
+<!-- jQuery Library -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Your Custom Greedy Navigation JavaScript -->
+<!-- Greedy Navigation Plugin -->
 <script src="{{ base_path }}/assets/js/plugins/jquery.greedy-navigation.js"></script>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  $(document).ready(function() {
+    $(".menu-toggle").click(function() {
+      $(".dropdown-menu").toggleClass("show");
+    });
+  });
+</script>
+
+<style>
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 100;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+  }
+</style>
