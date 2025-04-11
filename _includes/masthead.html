@@ -4,26 +4,18 @@
     <nav class="navbar">
       <!-- Left button -->
       <a href="{{ base_path }}/" class="nav-button">{{ site.title }}</a>
-
-      <!-- Middle navigation links -->
-      <div class="nav-links visible-links">
+      
+      <!-- Navigation links (visible on desktop, hidden on mobile) -->
+      <div class="nav-links">
         {% for link in site.data.navigation.main %}
-          {% assign domain = link.url contains 'http' | ternary: '', base_path %}
-          <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+          {% if link.url contains 'http' %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {% else %}
+            <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
+          {% endif %}
         {% endfor %}
       </div>
-
-      <!-- Mobile Menu -->
-      <div class="dropdown">
-        <div class="dropdown-menu">
-          {% for link in site.data.navigation.main %}
-            {% if link.title != "Main Link" %}
-              <a href="{{ base_path }}{{ link.url }}">{{ link.title }}</a>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-
+      
       <!-- Mobile menu toggle (hamburger icon) -->
       <div class="menu-toggle">
         <span></span>
@@ -34,37 +26,6 @@
   </div>
 </div>
 
-<!-- jQuery Library -->
+<!-- Include jQuery and your script files -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Greedy Navigation Plugin -->
-<script src="{{ base_path }}/assets/js/plugins/jquery.greedy-navigation.js"></script>
-
-<!-- Mobile Menu Toggle Script -->
-<script>
-  $(document).ready(function() {
-    $(".menu-toggle").click(function() {
-      $(".dropdown-menu").toggleClass("show");
-    });
-  });
-</script>
-
-<style>
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 10px;
-    z-index: 100;
-  }
-
-  .dropdown-menu.show {
-    display: block;
-  }
-
-  .menu-toggle {
-    cursor: pointer;
-  }
-</style>
+<script src="{{ base_path }}/assets/js/mobile-menu.js"></script>
