@@ -7,8 +7,8 @@ author_profile: true
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jennifer Haliewicz - CV</title>
     <style>
         :root {
@@ -57,20 +57,13 @@ author_profile: true
             margin-bottom: 1rem;
         }
 
-        .professional-summary {
+        .professional-summary,
+        .experience-item,
+        .education-item,
+        .service-item,
+        .tech-skills {
             margin-bottom: 1rem;
-            background-color: rgba(255, 255, 255, 0.45); /* white with 85% opacity */
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            max-width: 700px;
-            margin: 2rem auto;
-            line-height: 1.6;
-            font-size: 1.1rem;
-        }
-        .experience-item, .education-item, .service-item {
-            margin-bottom: 1rem;
-            background-color: rgba(255, 255, 255, 0.45); /* white with 85% opacity */
+            background-color: rgba(255, 255, 255, 0.45);
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -80,12 +73,13 @@ author_profile: true
             font-size: 1.1rem;
         }
 
-        .company-name, .degree {
+        .company-name,
+        .degree {
             font-weight: bold;
             color: var(--dark-green);
         }
 
-        .date, {
+        .date {
             font-style: italic;
             color: var(--text-light);
         }
@@ -93,35 +87,18 @@ author_profile: true
         ul {
             list-style: disc;
             margin-left: 1rem;
-            
         }
-        .tech-skills {
-            margin-bottom: 1rem;
-            background-color: rgba(255, 255, 255, 0.45); /* white with 85% opacity */
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            max-width: 700px;
-            margin: 2rem auto;
-            line-height: 1.6;
-            font-size: 1.1rem;
-        
-        }
-            
+
         .tech b {
             font-weight: bold;
             font-style: italic;
-            color: var(--text-light); /* Ensures the correct green color */
-            
+            color: var(--text-light);
         }
+
         .tech-skills b {
             font-weight: bold;
-            color: var(--dark-green); /* Ensures headings in the skills list are green */
-                       
+            color: var(--dark-green);
         }
-
-
-
     </style>
 </head>
 <body>
@@ -130,17 +107,19 @@ author_profile: true
         <div class="contact-info">
             Portland, Oregon | jennifer.haliewicz@gmail.com | 971-269-6006
         </div>
-        <div class="prof-summary"><h2>PROFESSIONAL SUMMARY</h2>
-            Data Scientist with 3+ years of experience in machine learning, NLP, and AI-driven solutions.  Expertise in optimizing conversational AI systems and improving model performance, with a focus on enhancing accuracy and streamlining data workflows.<br><br> Pursuing an M.S. in Human Language Technology, combining technical skills with practical applications for scalable impact.</div>
-            
+        <div class="professional-summary">
+            <h2>PROFESSIONAL SUMMARY</h2>
+            Data Scientist with 3+ years of experience in machine learning, NLP, and AI-driven solutions. Expertise in optimizing conversational AI systems and improving model performance, with a focus on enhancing accuracy and streamlining data workflows.<br><br>
+            Pursuing an M.S. in Human Language Technology, combining technical skills with practical applications for scalable impact.
+        </div>
     </header>
 
     <section>
         <h2>EDUCATION</h2>
         <div class="education-item">
-            <div class="degree"><b>M.S. in Human Language Technology</b></div>
-            <div class="date"><i>University of Arizona | Expected 2025</i></div>
-            <div class="relevant-courses">Relevant Coursework: Machine Learning, Advanced Statistical NLP, Data Mining, Deep Learning, Speech Processing, Information Retreival</div>
+            <div class="degree">M.S. in Human Language Technology</div>
+            <div class="date">University of Arizona | Expected 2025</div>
+            <div class="relevant-courses">Relevant Coursework: Machine Learning, Advanced Statistical NLP, Data Mining, Deep Learning, Speech Processing, Information Retrieval</div>
         </div>
         <div class="education-item">
             <div class="degree">B.A. in Applied Linguistics</div>
@@ -151,40 +130,39 @@ author_profile: true
             <div class="date">Portland State University, 2012</div>
         </div>
     </section>
+
     <section>
         <h2>TECHNICAL SKILLS</h2>
-<div class="tech-skills">
-    <div>
-        <b>Programming & Data Science</b><br>
-        <span>Python (pandas, NumPy, scikit-learn, TensorFlow, PyTorch), SQL, R, Azure Machine Learning</span>
-    </div>
-    <div>
-        <b>Machine Learning & NLP</b><br>
-        <span>Supervised/Unsupervised Learning, Deep Learning, Speech Processing, NLP, Model Deployment & Optimization</span>
-    </div>
-    <div>
-        <b>Big Data & Databases</b><br>
-        <span>PostgreSQL, BigQuery, NoSQL, Data Warehousing</span>
-    </div>
-    <div>
-        <b>Cloud & Platforms</b><br>
-        <span>AWS, Azure (Azure ML, Azure Databricks), Git, Jupyter, Power BI</span>
-    </div>
-    <div>
-        <b>Tools</b><br>
-        <span>Tableau, Looker, Sigma Computing, Data Pipelines, MLFlow, Visual Studio Code, PyCharm</span>
-    </div>
-</div>
-
-</div>
+        <div class="tech-skills">
+            <div>
+                <b>Programming & Data Science</b><br />
+                Python (pandas, NumPy, scikit-learn, TensorFlow, PyTorch), SQL, R, Azure Machine Learning
+            </div>
+            <div>
+                <b>Machine Learning & NLP</b><br />
+                Supervised/Unsupervised Learning, Deep Learning, Speech Processing, NLP, Model Deployment & Optimization
+            </div>
+            <div>
+                <b>Big Data & Databases</b><br />
+                PostgreSQL, BigQuery, NoSQL, Data Warehousing
+            </div>
+            <div>
+                <b>Cloud & Platforms</b><br />
+                AWS, Azure (Azure ML, Azure Databricks), Git, Jupyter, Power BI
+            </div>
+            <div>
+                <b>Tools</b><br />
+                Tableau, Looker, Sigma Computing, Data Pipelines, MLFlow, Visual Studio Code, PyCharm
+            </div>
+        </div>
     </section>
 
     <section>
-        <h2>Work Experience</h2>
+        <h2>WORK EXPERIENCE</h2>
         <div class="experience-item">
             <div class="company-name">XRI Global | Human Language Technology Intern</div>
-            <div class="date">Oct 2024 - Present</div>
-            <div class="tech"><b>Technologies: PostgreSQL, Tableau, Replit, Python, GitHub</div></b>
+            <div class="date">Oct 2024 – Present</div>
+            <div class="tech"><b>Technologies:</b> PostgreSQL, Tableau, Replit, Python, GitHub</div>
             <ul>
                 <li>Contributed to the <em>Bridging the Digital Divide</em> project, expanding language technology for low-resource languages.</li>
                 <li>Designed and implemented PostgreSQL database schemas to support NLP research and dataset management.</li>
@@ -192,53 +170,35 @@ author_profile: true
                 <li>Developed UI prototypes in Replit, enhancing usability and front-end development.</li>
             </ul>
         </div>
+
         <div class="experience-item">
             <div class="company-name">NAVEX Global | Customer Service Technician</div>
-            <div class="date">Nov 2024 - Present</div><br>
+            <div class="date">Nov 2024 – Present</div>
         </div>
+
         <div class="experience-item">
             <div class="company-name">Verint | Data Analyst</div>
-            <div class="date">Nov 2022 - Feb 2024</div>
-            <div class="tech"><b>Technologies: PowerBI, SQL, JavaScript, Jira, Asana, Confluence, Excel</div></b>
+            <div class="date">Nov 2022 – Feb 2024</div>
+            <div class="tech"><b>Technologies:</b> Power BI, SQL, JavaScript, Jira, Asana, Confluence, Excel</div>
             <ul>
                 <li>Enhanced chatbot performance through NLP techniques, reducing customer escalations and improving resolution times by over 25%.</li>
                 <li>Led analytics for major clients, improving key performance metrics like interaction time, resolution speed, and customer satisfaction.</li>
                 <li>Developed and implemented data governance strategies, improving data accuracy and streamlining information retrieval.</li>
             </ul>
         </div>
+
         <div class="experience-item">
             <div class="company-name">Grin, Inc | Associate Data Analyst</div>
-            <div class="date">Jun 2022 - Oct 2022</div>
-            <div class="tech"><b>Technologies: SQL, BigQuery, Sigma Computing, Salesforce, Google Analytics</div></b>
+            <div class="date">Jun 2022 – Oct 2022</div>
+            <div class="tech"><b>Technologies:</b> SQL, BigQuery, Sigma Computing, Salesforce, Google Analytics</div>
             <ul>
-                <li>Analyzed customer, communication and marketing data to optimize ad spend, improve engagement and drive retention.</li>
+                <li>Analyzed customer, communication, and marketing data to optimize ad spend, improve engagement, and drive retention.</li>
                 <li>Designed and implemented SQL-based reporting dashboards, reducing manual reporting time by 10+ hours per week.</li>
-                <li>Supported the creating of scalable data pipelines to improve process efficiency and optimize decision-making.</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <div class="company-name">Mountain Measurement, Inc | Data Analyst & Program Manager</div>
-            <div class="date">Sep 2019 - Apr 2022</div>
-            <div class="tech"><b>Technologies: SQL, Tableau, MariaDB, HTML, CSS, Ruby on Rails</div></b>
-            <ul>
-                <li>Developed SQL-driven Tableau dashboards to monitor nursing education program performance across 300+ institutions.</li>
-                <li>Automated reporting workflows, reducing manual data processing time by over 30%.</li>
-                <li>Managed the transition to digital platforms, increasing engagement and offerings in continuing education programs.</li>
+                <li>Supported the creation of scalable data pipelines to improve process efficiency and optimize decision-making.</li>
             </ul>
         </div>
     </section>
 
-    <section>
-        <h2>Publications</h2>
-    </section>
-
-    <section>
-        <h2>Talks</h2>
-    </section>
-
-    <section>
-        <h2>Teaching</h2>
-    </section>
 
     <section>
         <h2>Service and Leadership</h2>
